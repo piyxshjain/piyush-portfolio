@@ -1,0 +1,256 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #111;
+    color: crimson;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding-left: 20px;
+    text-align: center;
+    font-size: 48px;
+
+}
+
+.yellow {
+    color: #ffcc00;
+}
+
+.white {
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    text-align: center;
+    margin: 15px;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #ffcc00
+}
+
+nav a.Active {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* Adjust the thickness of the underline */
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+    transform: scaleX(1);
+}
+
+section {
+    padding: 20px;
+    background-color: #222;
+    margin: 20px;
+    border: 1px solid#ffcc00;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+
+div img {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    border-radius: 100%;
+    animation: slideLeft 2s ease forwards;
+
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: 50px;
+}
+
+/* table {
+    border: 2px solid #fff1da;
+    align-items: end;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 100%;
+    color: #ffcc00;
+    opacity: 0;
+    animation: fadeIn 1s ease s forwards;
+    
+}
+
+table tr th {
+    border: 2px solid #fff1da;
+} */
+
+#introtextbody {
+    align-items: end;
+    /* margin: 0 auto; */
+    color: #fefefe;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.5s forwards;
+    font-size: 80px;
+
+}
+
+
+@media screen and (max-width: 651px) {
+    nav {
+        font-size: 18px;
+        display: none;
+    }
+
+    .introtext {
+        font-size: 30px;
+    }
+
+    #introtextbody {
+        width: 100%;
+    }
+
+    #introtextbtn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    table {
+        font-size: 18px;
+        width: 100%;
+        margin: 12px auto;
+    }
+
+    .introtext {
+        font-size: 40px;
+    }
+    
+}
+
+@media screen and (min-width: 548px) {
+    table {
+        font-size: 18px;
+        width: 60%;
+        margin: 12px auto;
+    }
+
+    .introtext {
+        font-size: 72px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    table {
+        font-size: 18px;
+        width: 60%;
+        margin: 12px auto;
+    }
+
+    .introtext {
+        font-size: 50px;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#introtextbtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+#btn1intro {
+    width: 300px;
+    height: 100px;
+    
+    font-size: 30px;
+    color: #ffb300;
+    background-color: #111;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.5s forwards;
+    border-radius: 50px;
+
+}
+
+.linesec2{
+    color:#ffb300;
+}
+
+#introtextbody {
+    height: fit-content;
+    text-align: center;
+}
+
+
+
